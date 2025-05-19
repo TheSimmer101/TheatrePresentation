@@ -8,6 +8,7 @@ import pentheus from "./assets/pentheus.jpg"
 import think from "./assets/think-of-me.jpg"
 import sisi from "./assets/sisi.jpg"
 import muto from "./assets/il-muto.jpg"
+import red from "./assets/red.jpg"
 import './App.css'
 
 const pages = [
@@ -16,7 +17,9 @@ const pages = [
   { type: "image", content: [think,sisi]},
   {type:"text", heading:"Think of Me",content:"\n\n\nFor the first time, Christine is the main star of the show.\nThe outfit is a visual cue for the audience. She is no longer just a side actress. \n\nMonks writes that costumes and the actor’s body become\nindistinguishable in the audience’s experience of a performance.", bulletPoints:["The outfit is a visual cue for the audience.","It transforms the audience's and Christine's perception of her character.","Fun fact: The dress is based off a painting of Empress Sisi of Austria"]},
   // { type: "text", content: "Another insightful page with text!" },
-  { type: "text", heading: "Truth and Performance", image: muto, content: "(Il Muto)\nChristine crossdresses, playing man who is the secret lover of Carlotta's character.\nMuch like in the Bacchae, the audience likely has \"double vision\" from seeing an actor dressed up, acting like the opposite gender.\n\nOnce again, Christine transforms when on stage.\n\nCarlotta on the other hand, being the diva of the theater, is stil dramatic as always." }
+  { type: "text", heading: "Truth and Performance", image: muto, bulletPoints: ["Costumes reflect the story, as well as the actors.", "Costume designers create costumes with the actors in mind, and the directors choose who wears each costume."], content: "(Il Muto)\nChristine crossdresses, playing a man who is the secret lover of Carlotta's character.\nMuch like in the Bacchae, the audience likely has \"double vision\" from seeing an actor dressed up, acting like the opposite gender.\n\nOnce again, Christine transforms when on stage.\n\nCarlotta on the other hand, being the diva, is stil dramatic as always.\n" },
+  {type: "text", heading: "Off Stage", image: red,content: "" },
+
 ];
 // function Page({type, content,heading, arrayIndex }){
 //   const p = pages[arrayIndex]
