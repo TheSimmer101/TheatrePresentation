@@ -21,9 +21,9 @@
 .bookImage 
 {
    max-width: 400px;
-  max-height: 550px; */
-  width: 80%;   /* Makes the image fill the width of the page */
-  height: auto;  /* Keeps the aspect ratio intact */
+  max-height: 550px; 
+  /* width: 80%;    Makes the image fill the width of the page */
+ /*  height: auto;  Keeps the aspect ratio intact */
   object-fit: contain;
 }
 .book-container {
