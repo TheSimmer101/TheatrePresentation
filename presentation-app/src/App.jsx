@@ -5,12 +5,15 @@ import coverImage from './assets/phantom-cover-image.jpg';
 import HTMLFlipBook from 'react-pageflip';
 import Chandelier from './assets/chandelier.jpeg'
 import pentheus from "./assets/pentheus.jpg"
+import think from "./assets/think-of-me.jpg"
+import sisi from "./assets/sisi.jpg"
 import './App.css'
 
 const pages = [
   { type: "text", heading: "Phantom of the Opera", image: Chandelier, content: "", bulletPoints:["A 2004 film starring Emmy Rossum and Gerard Butler",'Directed by Joel Schumacher', "Based on the musical by Andrew Lloyd Webber, adapted from novel of the same name",'Set in Paris, France 1870',"Costumes designed by Alexandra Byrne"]},
-  { type: "text", image: pentheus, heading: "Actor In Costume", content: "- Aiofe Monks", bulletPoints:["“[Pentheus’] plight suggests that costume does far more than decorate the surface of the body; rather, that it comes with risks and possibilities for the bodies and psyches of actor and audience alike.”"]},
-  { type: "image", content: coverImage},
+  { type: "text", image: pentheus, heading: "Actor In Costume", content: "- Aiofe Monks\n\nCostumes blur the line between the actors,\n the characters they play, and the audience.\n\n", bulletPoints:["“[Pentheus’] plight suggests that costume does far more than decorate the surface of the body; rather, that it comes with risks and possibilities for the bodies and psyches of actor and audience alike.”"]},
+  { type: "image", content: [think,sisi]},
+  {type:"text", heading:"Think of Me",content:"For the first time, Christine is the main star of the show.\nThe outfit is a visual cue for the audience.", bulletPoints:["The outfit is a visual cue for the audience.","It transforms the audience's and Christine's perception of her character.","Fun fact: The dress is based off a painting of Empress Sisi of Austria"]}
   // { type: "text", content: "Another insightful page with text!" },
   // { type: "image", content: "./assets/another-image.jpg" }
 ];
@@ -40,7 +43,14 @@ function Page({ pagesArray, arrayIndex }) {
   if (page.type === "image") {
     return (
       <div className="bookPage">
-        <img src={page.content} alt="Page Image" className="bookImage"/>
+        {/* <img src={page.content} alt="Page Image" className="bookImage"/> */}
+        {page.type === "image" && Array.isArray(page.content) ? (
+        page.content.map((imgSrc, index) => (
+          <img key={index} src={imgSrc} alt={`Image ${index}`} className="bookImage"/>
+        ))
+      ) : (
+        page.image && <img src={page.image} alt="Single Image" className="bookImage"/>
+      )}
       </div>
     );
   } else {
@@ -54,7 +64,10 @@ function Page({ pagesArray, arrayIndex }) {
         ))}
       </ul>
         )}
-        <p>{page.content}</p>
+        {/* <p>{page.content}</p> */}
+        {page.content.split("\n").map((line, index) => (
+    <span key={index}>{line}<br/></span>
+  ))}
         {page.image && (
       <img src={page.image} alt="Additional Page Image" className="bookImage"/>
     )}

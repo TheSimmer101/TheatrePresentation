@@ -17,10 +17,11 @@
 .bookCover {
  color: white;
 }
+
 .bookImage 
 {
-  /* width: 400px;
-  height: 350px; */
+   max-width: 400px;
+  max-height: 550px; */
   width: 80%;   /* Makes the image fill the width of the page */
   height: auto;  /* Keeps the aspect ratio intact */
   object-fit: contain;
