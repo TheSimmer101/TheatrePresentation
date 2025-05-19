@@ -9,6 +9,9 @@ import think from "./assets/think-of-me.jpg"
 import sisi from "./assets/sisi.jpg"
 import muto from "./assets/il-muto.jpg"
 import red from "./assets/red.jpg"
+import masq from "./assets/masq.jpg"
+import death from "./assets/red-death.jpg"
+
 import './App.css'
 
 const pages = [
@@ -19,25 +22,11 @@ const pages = [
   // { type: "text", content: "Another insightful page with text!" },
   { type: "text", heading: "Truth and Performance", image: muto, bulletPoints: ["Costumes reflect the story, as well as the actors.", "Costume designers create costumes with the actors in mind, and the directors choose who wears each costume."], content: "(Il Muto)\nChristine crossdresses, playing a man who is the secret lover of Carlotta's character.\nMuch like in the Bacchae, the audience likely has \"double vision\" from seeing an actor dressed up, acting like the opposite gender.\n\nOnce again, Christine transforms when on stage.\n\nCarlotta on the other hand, being the diva, is stil dramatic as always.\n" },
   {type: "text", heading: "Off Stage", image: red,content: "" },
+  {type: "text", heading: "Masquerade", image: masq,content: "Dressing up is fun!", bulletPoints:["Entire song about how you can become someone else and hide from the world, just by wearing a mask", "Masking is celebrated here, but scorned when the Phantom does it.\nWhat costumes are seen acceptable in society?"] },
+  {type: "text", heading: "", image: death, content: "Projects power and confidence.", bulletPoints:["An even bigger mask for the man that always wears a mask"] }
 
 ];
-// function Page({type, content,heading, arrayIndex }){
-//   const p = pages[arrayIndex]
-//   if (p.type === "image") {
-//     return (
-//       <div className="bookPage">
-//         <img src={content} alt="Page Image"  className="bookImage"/>
-//       </div>
-//     );
-//   } else {
-//     return (
-//       <div className="bookPage">
-//         <h2>{heading}</h2>
-//         <p>{content}</p>
-//       </div>
-//     );
-//   }
-// };
+
 
 function Page({ pagesArray, arrayIndex }) {
   const page = pagesArray[arrayIndex];
@@ -87,7 +76,7 @@ function App() {
   const [count, setCount] = useState(0)
   const bookRef = useRef(null);
   const [currentPage, setCurrentPage] = useState(1);
-  const totalPages = 6; // Update this as needed
+  const totalPages = 10; 
 
   const nextPage = () => {
     if (bookRef.current) {
