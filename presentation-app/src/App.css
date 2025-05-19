@@ -27,6 +27,8 @@
   object-fit: contain;
 }
 .book-container {
+  font-weight: bold;
+  font-size: 110%;
   margin-top: 250px;
   margin-bottom: 0px;
   display: flex;

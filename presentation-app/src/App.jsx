@@ -11,7 +11,7 @@ import muto from "./assets/il-muto.jpg"
 import red from "./assets/red.jpg"
 import masq from "./assets/masq.jpg"
 import death from "./assets/red-death.jpg"
-
+import noReturn from "./assets/no-return.png"
 import './App.css'
 
 const pages = [
@@ -23,8 +23,8 @@ const pages = [
   { type: "text", heading: "Truth and Performance", image: muto, bulletPoints: ["Costumes reflect the story, as well as the actors.", "Costume designers create costumes with the actors in mind, and the directors choose who wears each costume."], content: "(Il Muto)\nChristine crossdresses, playing a man who is the secret lover of Carlotta's character.\nMuch like in the Bacchae, the audience likely has \"double vision\" from seeing an actor dressed up, acting like the opposite gender.\n\nOnce again, Christine transforms when on stage.\n\nCarlotta on the other hand, being the diva, is stil dramatic as always.\n" },
   {type: "text", heading: "Off Stage", image: red,content: "" },
   {type: "text", heading: "Masquerade", image: masq,content: "Dressing up is fun!", bulletPoints:["Entire song about how you can become someone else and hide from the world, just by wearing a mask", "Masking is celebrated here, but scorned when the Phantom does it.\nWhat costumes are seen acceptable in society?"] },
-  {type: "text", heading: "", image: death, content: "Projects power and confidence.", bulletPoints:["An even bigger mask for the man that always wears a mask"] }
-
+  {type: "text", heading: "", image: death, content: "Projects power and confidence.", bulletPoints:["An even bigger mask for the man that always wears a mask"] },
+  { type: "text", heading: "Point of No Return", image: noReturn, content: "\n\n\nAn uncomfortable performance.\nDancing with a real criminal.\nRisky for both audience and actors alike.\n\n", bulletPoints:["Forced to perform as the lead, to act in this role, wearing this costume.", "Risky, as there's no telling what will happen.", "\nChristine is placed in a position similar to Pentheus."]}
 ];
 
 
@@ -59,7 +59,7 @@ function Page({ pagesArray, arrayIndex }) {
         )}
         {/* <p>{page.content}</p> */}
         {page.content.split("\n").map((line, index) => (
-    <span key={index}>{line}<br/></span>
+      <span key={index}>{line}<br/></span>
   ))}
         {page.image && (
       <img src={page.image} alt="Additional Page Image" className="bookImage"/>
@@ -117,7 +117,7 @@ function App() {
     <div className = "bookPage"><Page key={index} pagesArray={pages} arrayIndex={index} /></div>
   ))}
             <div className = "bookCover"></div>
-            {/* <div className= "bookCover"></div> */}
+            <div className= "bookCover"></div>
         </HTMLFlipBook>
       </div>
       <div className = "pageButtons">
