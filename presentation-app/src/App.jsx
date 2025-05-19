@@ -9,7 +9,7 @@ import './App.css'
 
 const pages = [
   { type: "text", heading: "Phantom of the Opera", image: Chandelier, content: "", bulletPoints:["A 2004 film starring Emmy Rossum and Gerard Butler",'Directed by Joel Schumacher', "Based on the musical by Andrew Lloyd Webber, adapted from novel of the same name",'Set in Paris, France 1870',"Costumes designed by Alexandra Byrne"]},
-  { type: "text", image: pentheus, heading: "Actor In Costume", content: "- Aiofe Monks", bulletPoints:["'“[Pentheus’] plight suggests that costume does far more than decorate the surface of the body; rather, that it comes with risks and possibilities for the bodies and psyches of actor and audience alike.”'"]},
+  { type: "text", image: pentheus, heading: "Actor In Costume", content: "- Aiofe Monks", bulletPoints:["“[Pentheus’] plight suggests that costume does far more than decorate the surface of the body; rather, that it comes with risks and possibilities for the bodies and psyches of actor and audience alike.”"]},
   { type: "image", content: coverImage},
   // { type: "text", content: "Another insightful page with text!" },
   // { type: "image", content: "./assets/another-image.jpg" }
